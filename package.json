@@ -1,0 +1,20 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "start": "node dist/bamazonCustomer.js"
+  },
+  "author": "Ray McCann",
+  "license": "ISC",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "format-currency": "^1.0.0",
+    "mysql": "^2.13.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0"
+  }
+}
