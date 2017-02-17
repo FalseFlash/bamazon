@@ -6,6 +6,7 @@ This week, we've used Node.JS and MySQL to create a command line shop. Each time
 ## Requirements
 * Node.JS
 * MySQL
+* Babel (if compiling source)
 
 ## Get it Running
 
