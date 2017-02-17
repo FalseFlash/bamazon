@@ -34,7 +34,7 @@ sql.connect((err) => {
     console.log('Connected!');
 });
 
-sql.query('SELECT * FROM products WHERE stock_quantity > 0;', (err, results, fields) => {
+sql.query('SELECT * FROM products;', (err, results, fields) => {
     if (err) throw err;
 
     results.forEach((data) => {
@@ -61,7 +61,7 @@ const purchase = () => {
     let info = {
         properties: {
             ID: {
-                description: 'Enter the Item ID you wish to purchase: '
+                description: 'Enter the Item ID you wish to purchase '
             },
             quantity: {
                 description: 'How many do you wish to purchase? '
@@ -78,7 +78,7 @@ const purchase = () => {
             stock: 0
         };
 
-        sql.query(`SELECT id, stock_quantity, product_name FROM products WHERE id=? AND stock_quantity > 0 LIMIT 1`, bought.ID, (err, results, fields) => {
+        sql.query(`SELECT id, stock_quantity, product_name FROM products WHERE id=? LIMIT 1`, bought.ID, (err, results, fields) => {
             let data = results[0];
 
             const stock = parseInt(data.stock_quantity);

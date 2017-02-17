@@ -56,7 +56,7 @@ sql.connect(function (err) {
     console.log('Connected!');
 });
 
-sql.query('SELECT * FROM products WHERE stock_quantity > 0;', function (err, results, fields) {
+sql.query('SELECT * FROM products;', function (err, results, fields) {
     if (err) throw err;
 
     results.forEach(function (data) {
@@ -81,7 +81,7 @@ var purchase = function purchase() {
     var info = {
         properties: {
             ID: {
-                description: 'Enter the Item ID you wish to purchase: '
+                description: 'Enter the Item ID you wish to purchase '
             },
             quantity: {
                 description: 'How many do you wish to purchase? '
@@ -98,7 +98,7 @@ var purchase = function purchase() {
             stock: 0
         };
 
-        sql.query('SELECT id, stock_quantity, product_name FROM products WHERE id=? AND stock_quantity > 0 LIMIT 1', bought.ID, function (err, results, fields) {
+        sql.query('SELECT id, stock_quantity, product_name FROM products WHERE id=? LIMIT 1', bought.ID, function (err, results, fields) {
             var data = results[0];
 
             var stock = parseInt(data.stock_quantity);
