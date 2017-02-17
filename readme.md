@@ -12,7 +12,8 @@ This week, we've used Node.JS and MySQL to create a command line shop. Each time
 ```
 git clone https://github.com/FalseFlash/bamazon.git
 npm install
-npm start
 ```
 
-First, run [query.sql](query.sql) to build the database and then run the commands below to run the application.
+First, run [query.sql](query.sql) to build the database and then run the command below to run the application.
+
+```npm start```
