@@ -16,4 +16,9 @@ npm install
 
 First, run [query.sql](query.sql) to build the database and then run the command below to run the application.
 
-```npm start```
+Note: You'll have to create a `password.js` file in `/dist` file with the following contents:
+```
+exports.password = 'Your Password';
+```
+
+```npm start``` after you've done the steps above.
